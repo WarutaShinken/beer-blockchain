@@ -19,7 +19,7 @@ dependencies = [
     #  "keyrings.cryptfile==1.3.8",  # Secure storage for keys on Linux (Will be replaced)
     #  See https://github.com/frispete/keyrings.cryptfile/issues/15
     "PyYAML==5.4.1",  # Used for config file format
-    "setproctitle==1.2.2",  # Gives the chia processes readable names
+    "setproctitle==1.2.2",  # Gives the beer processes readable names
     "sortedcontainers==2.3.0",  # For maintaining sorted mempools
     "websockets==8.1.0",  # For use in wallet RPC and electron UI
     "click==7.1.2",  # For the CLI
@@ -27,7 +27,7 @@ dependencies = [
 ]
 
 upnp_dependencies = [
-    "miniupnpc==2.1",  # Allows users to open ports on their router
+    "miniupnpc==2.2.2",  # Allows users to open ports on their router
 ]
 
 dev_dependencies = [
@@ -41,14 +41,14 @@ dev_dependencies = [
 ]
 
 kwargs = dict(
-    name="chia-blockchain",
+    name="beer-blockchain",
     author="Mariano Sorgente",
-    author_email="mariano@chia.net",
-    description="Chia blockchain full node, farmer, timelord, and wallet.",
-    url="https://chia.net/",
+    author_email="mariano@beernetwork.org",
+    description="Beer blockchain full node, farmer, timelord, and wallet.",
+    url="https://beernetwork.org/",
     license="Apache License",
     python_requires=">=3.7, <4",
-    keywords="chia blockchain node",
+    keywords="beer blockchain node",
     install_requires=dependencies,
     setup_requires=["setuptools_scm"],
     extras_require=dict(
@@ -58,52 +58,52 @@ kwargs = dict(
     ),
     packages=[
         "build_scripts",
-        "chia",
-        "chia.cmds",
-        "chia.consensus",
-        "chia.daemon",
-        "chia.full_node",
-        "chia.timelord",
-        "chia.farmer",
-        "chia.harvester",
-        "chia.introducer",
-        "chia.plotting",
-        "chia.protocols",
-        "chia.rpc",
-        "chia.server",
-        "chia.simulator",
-        "chia.types.blockchain_format",
-        "chia.types",
-        "chia.util",
-        "chia.wallet",
-        "chia.wallet.puzzles",
-        "chia.wallet.rl_wallet",
-        "chia.wallet.cc_wallet",
-        "chia.wallet.did_wallet",
-        "chia.wallet.settings",
-        "chia.wallet.trading",
-        "chia.wallet.util",
-        "chia.ssl",
+        "beer",
+        "beer.cmds",
+        "beer.consensus",
+        "beer.daemon",
+        "beer.full_node",
+        "beer.timelord",
+        "beer.farmer",
+        "beer.harvester",
+        "beer.introducer",
+        "beer.plotting",
+        "beer.protocols",
+        "beer.rpc",
+        "beer.server",
+        "beer.simulator",
+        "beer.types.blockchain_format",
+        "beer.types",
+        "beer.util",
+        "beer.wallet",
+        "beer.wallet.puzzles",
+        "beer.wallet.rl_wallet",
+        "beer.wallet.cc_wallet",
+        "beer.wallet.did_wallet",
+        "beer.wallet.settings",
+        "beer.wallet.trading",
+        "beer.wallet.util",
+        "beer.ssl",
         "mozilla-ca",
     ],
     entry_points={
         "console_scripts": [
-            "chia = chia.cmds.chia:main",
-            "chia_wallet = chia.server.start_wallet:main",
-            "chia_full_node = chia.server.start_full_node:main",
-            "chia_harvester = chia.server.start_harvester:main",
-            "chia_farmer = chia.server.start_farmer:main",
-            "chia_introducer = chia.server.start_introducer:main",
-            "chia_timelord = chia.server.start_timelord:main",
-            "chia_timelord_launcher = chia.timelord.timelord_launcher:main",
-            "chia_full_node_simulator = chia.simulator.start_simulator:main",
+            "beer = beer.cmds.beer:main",
+            "beer_wallet = beer.server.start_wallet:main",
+            "beer_full_node = beer.server.start_full_node:main",
+            "beer_harvester = beer.server.start_harvester:main",
+            "beer_farmer = beer.server.start_farmer:main",
+            "beer_introducer = beer.server.start_introducer:main",
+            "beer_timelord = beer.server.start_timelord:main",
+            "beer_timelord_launcher = beer.timelord.timelord_launcher:main",
+            "beer_full_node_simulator = beer.simulator.start_simulator:main",
         ]
     },
     package_data={
-        "chia": ["pyinstaller.spec"],
-        "chia.wallet.puzzles": ["*.clvm", "*.clvm.hex"],
-        "chia.util": ["initial-*.yaml", "english.txt"],
-        "chia.ssl": ["chia_ca.crt", "chia_ca.key", "dst_root_ca.pem"],
+        "beer": ["pyinstaller.spec"],
+        "beer.wallet.puzzles": ["*.clvm", "*.clvm.hex"],
+        "beer.util": ["initial-*.yaml", "english.txt"],
+        "beer.ssl": ["beer_ca.crt", "beer_ca.key", "dst_root_ca.pem"],
         "mozilla-ca": ["cacert.pem"],
     },
     use_scm_version={"fallback_version": "unknown-no-.git-directory"},

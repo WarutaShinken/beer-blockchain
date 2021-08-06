@@ -1,5 +1,5 @@
 import pytest
-from chia.util.misc import format_minutes
+from beer.util.misc import format_minutes
 
 
 class TestMisc:

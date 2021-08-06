@@ -1,0 +1,7 @@
+[submodule "beer-blockchain-gui"]
+	path = beer-blockchain-gui
+	url = https://github.com/Beer-Network/beer-blockchain-gui.git
+	branch = main
+[submodule "mozilla-ca"]
+	path = mozilla-ca
+	url = https://github.com/Chia-Network/mozilla-ca.git
