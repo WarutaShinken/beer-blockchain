@@ -2,9 +2,10 @@
 Released in Aug 6 2021
 
 ## ATTENTION: Version 1.0.1 is the right version, please do NOT use previous version
+==================================
 Any one upgrade to v1.0.1, please delete your old data first.
-the old data is here: ‘~/.beer/’
-
+the old data is here: '~/.beer/'
+================================
 
 **Beer** is a modern community-centric green cryptocurrency based on a proof-of-space-and-time consensus algorithm. It is a community-supported fork of the [Chia Network](https://github.com/Chia-Network/chia-blockchain) codebase.
 
