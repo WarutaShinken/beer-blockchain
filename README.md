@@ -1,9 +1,9 @@
 # beer-blockchain
 Released in Aug 6 2021
 
-## ATTENTION: Version code > 1.0.1 is the right version, please do NOT use previous version
+## ATTENTION: Version code > 1.0.2 is the right version, please do NOT use previous version
 
-### Any one upgrade to v1.0.1 or newer, please delete your old data first.
+### Any one upgrade to v1.0.2 or newer, please delete your old data first.
 ### delete your old data: ' ~/.beer/ ' 
 
 
