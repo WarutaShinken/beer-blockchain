@@ -22,7 +22,7 @@ Most users should only install harvesters, farmers, plotter, full nodes, and wal
 
 
 # Installing & Running
-Download Wallet :[BEER GUI](https://github.com/Beer-Network/beer-blockchain/releases/tag/1.0.1)
+Download Wallet :[BEER GUI](https://github.com/Beer-Network/beer-blockchain/releases/)
 
 As reference: a Quick Start Guide is available from the repository [CHIA WIKI](https://github.com/Chia-Network/chia-blockchain/wiki).
 
