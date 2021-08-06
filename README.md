@@ -2,6 +2,7 @@
 Released in Aug 6 2021
 
 ## ATTENTION: Version 1.0.1 is the right version, please do NOT use previous version
+
 ==================================
 Any one upgrade to v1.0.1, please delete your old data first.
 the old data is here: '~/.beer/'
