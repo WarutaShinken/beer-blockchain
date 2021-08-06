@@ -76,11 +76,6 @@ def check_keys(new_root: Path) -> None:
     # Set the destinations
     if "xbr_target_address" not in config["farmer"]:
         print(f"Setting the xbr destination address for coinbase fees reward to {all_targets[0]}")
-
-        print(f"Setting the xbr destination address for coinbase fees reward to hex {decode_puzzle_hash(all_targets[0]).hex()}")
-
-        print(f"Setting the xbr destination address for coinbase fees reward to {encode_puzzle_hash(decode_puzzle_hash(all_targets[0]), prefix)}")
-
         config["farmer"]["xbr_target_address"] = all_targets[0]
     elif config["farmer"]["xbr_target_address"] not in all_targets:
         print(
