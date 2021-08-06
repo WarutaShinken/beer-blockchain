@@ -122,7 +122,7 @@ python -m pip install -e . --extra-index-url https://pypi.chia.net/simple/
 echo ""
 echo "Beer blockchain install.sh complete. "
 echo "For assistance join us on Discord in the #testnet chat channel:"
-echo "https://discord.gg/TgJyxsEFFc"
+echo "https://discord.gg/XxzEn9Ccdn"
 echo ""
 echo "Try the Quick Start Guide to running beer-blockchain:"
 echo "https://github.com/Beer-Network/beer-blockchain/wiki/Quick-Start-Guide"
