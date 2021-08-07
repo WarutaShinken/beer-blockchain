@@ -2,7 +2,7 @@
 # Beer-blockchain
 * First of first: **Never drink driving**.
 * Second: **Don't be drunk at the Release Day!**
-* **D-day**: **Aug-7-2021**(the next day of the first thursday of Augest)
+* **D-day**: **Aug-6-2021**(the next day of the first thursday of Augest)
 
 **Beer** is a modern community-centric green cryptocurrency based on a proof-of-space-and-time consensus algorithm. It is a community-supported fork of the [Chia Network](https://github.com/Chia-Network/chia-blockchain) codebase.
 
