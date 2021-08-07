@@ -65,9 +65,9 @@ CHECKOUT_TEST_BLOCKS_AND_PLOTS
     - name: Link home directory
       run: |
         cd $HOME
-        ln -s $GITHUB_WORKSPACE/.beer
-        echo "$HOME/.beer"
-        ls -al $HOME/.beer
+        ln -s $GITHUB_WORKSPACE/.beernetwork
+        echo "$HOME/.beernetwork"
+        ls -al $HOME/.beernetwork
 
     - name: Install ubuntu dependencies
       run: |

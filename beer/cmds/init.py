@@ -16,7 +16,7 @@ def init_cmd(ctx: click.Context, create_certs: str):
 
     \b
     Follow these steps to create new certificates for a remote harvester:
-    - Make a copy of your Farming Machine CA directory: ~/.beer/[version]/config/ssl/ca
+    - Make a copy of your Farming Machine CA directory: ~/.beernetwork/[version]/config/ssl/ca
     - Shut down all beer daemon processes with `beer stop all -d`
     - Run `beer init -c [directory]` on your remote harvester,
       where [directory] is the the copy of your Farming Machine CA directory

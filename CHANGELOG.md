@@ -772,7 +772,7 @@ all fields that referred to sub blocks are changed to blocks.
 - Harvester and farmer will start when the GUI starts instead of waiting for key selection if there are already keys available. This means you will start farming on reboot if you have the Beer application set to launch on start.
 - Testnet is now running at the primary port of 58444. Update your routers appropriately. This opens 8444 for mainnet.
 - All networking code has been refactored and mostly moved to websockets.
-- RPCs and daemon now communicate over TLS with certificates that are generated into `~/.beer/VERSION/config/`
+- RPCs and daemon now communicate over TLS with certificates that are generated into `~/.beernetwork/VERSION/config/`
 - We have moved to taproot across all of our transactions and smart transactions.
 - We have adopted chech32m encoding of keys and addresses in parallel to bitcoin's coming adoption of bech32m.
 - The rate limited wallet was updated and re-factored.
@@ -784,7 +784,7 @@ all fields that referred to sub blocks are changed to blocks.
 - `beer show -s` has been refactored to support the new consensus.
 - `beer netspace` has been refactored for new consensus.
 - aiohttp, clvm-tools, colorlog, concurrent-log-handler, keyring, cryptography, and sortedcontainers have been upgraded to their current versions.
-- Tests now place a cache of blocks and plots in the ~/.beer/ directory to speed up total testing time.
+- Tests now place a cache of blocks and plots in the ~/.beernetwork/ directory to speed up total testing time.
 - Changes were made to chiapos to correctly support the new bitfiled backpropogation on FreeBSD and OpenBSD. With the exception of needing to work around python cryptography as outlined on the wiki, FreeBSD and OpenBSD should be able to compile and run beer-blockchain.
 - With the change to new consensus many components of the chain and local database are not yet stored optimally. Startup and sync times may be slower than usual so please be patient. This will improve next release.
 - Errata: Coinbase amount is missing from the GUI Block view.
@@ -938,7 +938,7 @@ all fields that referred to sub blocks are changed to blocks.
 
 ### Changed
 
-- This is a new blockchain as we changed how the default puzzle hashes are generated and previous coins would not be easy to spend. Plots made with Beta 8 and newer continue to work, but all previous test beer are left on the old chain and do not migrate over. Configuration data like plot directories automatically migrate in your `~/.beer` directory.
+- This is a new blockchain as we changed how the default puzzle hashes are generated and previous coins would not be easy to spend. Plots made with Beta 8 and newer continue to work, but all previous test beer are left on the old chain and do not migrate over. Configuration data like plot directories automatically migrate in your `~/.beernetwork` directory.
 - Proof of Space now requires significantly less temp space to generate a new plot. A k=32 that used to require 524GiB now requires only 313GiB - generally a 40% decrease across all k sizes.
 - When plotting, instead of 1 monolithic temp file, there are now 8 files - one for each of the 7 tables and one for sorting plot data. These files are deleted as the `-2` or `-d` final file is written so the final file can fit within the footprint of the temporary files on the same filesystem.
 - We've made various additional CPU optimizations to the Proof of Space plotter that reduces plotting time by an additional 13%. These changes will also reduce CPU utilization in harvesting.
@@ -1165,7 +1165,7 @@ relic. We will make a patch available for these systems shortly.
 - Plots are now refreshed in the UI after each plot instead of at the end of plotting.
 - We have made performance improvements to plotting speed on all platforms.
 - The command line plotter now supports specifying it's memory buffer size.
-- Test plots for the simulation and testing harness now go into `~/.beer/test-plots/`
+- Test plots for the simulation and testing harness now go into `~/.beernetwork/test-plots/`
 - We have completely refactored all networking code towards making each Beer service use the same default networking infrastructure and move to websockets as the default networking wire protocol.
 - We added additional improvements and more RPCs to the start daemon and various services to continue to make beer start/stop reliable cross platform.
 - The install.sh script now discovers if it's running on Ubuntu less than 20.04 and correctly upgrades node.js to the current stable version.
@@ -1336,7 +1336,7 @@ relic. We will make a patch available for these systems shortly.
 
 - Windows native is close but not here yet. Also, we should be adding back MacOS Mojave support shortly.
 - So why is this Beta 3 you're wondering? Well, we're getting used to our new release management tools and a hotfix devoured our beta2 nomenclature... We've marked it YANKED here.
-- If you previously used the plot_root variable in config, your plot directory names might not migrate correctly. Please double check the filenames in `~/.beer/beta-1.0b3/config/plots.yaml` after migrating
+- If you previously used the plot_root variable in config, your plot directory names might not migrate correctly. Please double check the filenames in `~/.beernetwork/beta-1.0b3/config/plots.yaml` after migrating
 
 ## [1.0beta2] aka Beta 1.2 - 2020-04-04 [YANKED]
 
@@ -1354,7 +1354,7 @@ relic. We will make a patch available for these systems shortly.
 
 - We have revamped the beer management command line. To start a farmer all you have to do is start the venv with `. ./activate` and then type `beer-start-farmer &`. The [README.md](https://github.com/Beer-Network/beer-blockchain/blob/main/README.md) has been updated to reflect the new commands.
 - We have moved all node to node communication to TLS 1.3 by default. For now, all TLS is unauthenticated but certain types of over the wire node to node communications will have the ability to authenticate both by certificate and by inter protocol signature. Encrypting over the wire by default stops casual snooping of transaction origination, light wallet to trusted node communication, and harvester-farmer-node communication for example. This leaves only the mempool and the chain itself open to casual observation by the public and the various entities around the world.
-- Configuration directories have been moved to a default location of HomeDirectory/.beer/release/config, plots/ db/, wallet/ etc. This can be overridden by `export BEER_ROOT=~/.beer` for example which would then put the plots directory in `HomeDirectory/.beer/plots`.
+- Configuration directories have been moved to a default location of HomeDirectory/.beernetwork/release/config, plots/ db/, wallet/ etc. This can be overridden by `export BEER_ROOT=~/.beernetwork` for example which would then put the plots directory in `HomeDirectory/.beernetwork/plots`.
 - The libraries beer-pos, beer-fast-vdf, and beer-bip-158 have been moved to their own repositories: [chiapos](https://github.com/Beer-Network/chiapos), [chiavdf](https://github.com/Beer-Network/chiavdf), and [chaibip158](https://github.com/Beer-Network/chiabip158). They are brought in by beer-blockchain at install time. Our BLS signature library remains at [bls-signatures](https://github.com/Beer-Network/bls-signatures).
 - The install process now brings in chiapos, chiavdf, etc from Pypi where they are auto published via GitHub Actions ci using cibuildwheel. Check out `.github/workflows/build.yml` for build methods in each of the sub repositories.
 - `beer-regenerate-keys` has been renamed `beer-generate-keys`.

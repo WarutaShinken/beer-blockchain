@@ -16,21 +16,6 @@ Most users should only install harvesters, farmers, plotter, full nodes, and wal
 
 
 # Installing & Running
-If you are running an old version, please delete the old data under ```~/.beer``` 
-
-on Windows Powershell:
-```bash
-rm ~/.beer
-```
-on OSX Terminal:
-```bash
-rm -r ~/.beer
-```
-on Linux:
-```bash
-rm -r ~/.beer
-```
-
 
 ### Download Wallet :[Beer Blockchain](https://github.com/Beer-Network/beer-blockchain/releases/)
 

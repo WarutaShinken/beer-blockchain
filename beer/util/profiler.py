@@ -6,17 +6,17 @@ import pathlib
 from beer.util.path import mkdir, path_from_root
 
 # to use the profiler, enable it config file, "enable_profiler"
-# the output will be printed to your beer root path, e.g. ~/.beer/mainnet/profile/
+# the output will be printed to your beer root path, e.g. ~/.beernetwork/mainnet/profile/
 # to analyze the profile, run:
 
-#   python beer/utils/profiler.py ~/.beer/mainnet/profile | less -r
+#   python beer/utils/profiler.py ~/.beernetwork/mainnet/profile | less -r
 
 # this will print CPU usage of the beer full node main thread at 1 second increments.
 # find a time window of interest and analyze the profile file (which are in pstats format).
 
 # for example:
 
-#   python beer/utils/profiler.py ~/.beer/mainnet/profile 10 20
+#   python beer/utils/profiler.py ~/.beernetwork/mainnet/profile 10 20
 
 
 async def profile_task(root_path: pathlib.Path, log: logging.Logger) -> None:
