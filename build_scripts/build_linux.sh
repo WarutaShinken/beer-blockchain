@@ -58,7 +58,7 @@ if [ "$LAST_EXIT_CODE" -ne 0 ]; then
 fi
 
 electron-packager . beer-blockchain --asar.unpack="**/daemon/**" --platform=linux \
---icon=src/assets/img/Beer.icns --overwrite --app-bundle-id=net.beer.blockchain \
+--icon=src/assets/img/Beer.icns --overwrite --app-bundle-id=org.beernetwork.blockchain \
 --appVersion=$BEER_INSTALLER_VERSION
 LAST_EXIT_CODE=$?
 if [ "$LAST_EXIT_CODE" -ne 0 ]; then
