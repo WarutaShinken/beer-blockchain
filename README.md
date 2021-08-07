@@ -1,13 +1,8 @@
-# beer-blockchain
-Released in Aug 6 2021
-
-## ATTENTION: Version code > 1.0.3 is the right version, please do NOT use previous version
-
-### Any one upgrade to v1.0.3 or newer, please delete your old data first.
-### delete your old data: ' ~/.beer/ ' 
-
-
-
+![Image of Yaktocat](https://github.com/Beer-Network/beer-blockchain-gui/blob/1bfc381f71b6f9824d15a20dffd280006bb8d81e/src/assets/img/beer_logo.svg)
+# Beer-blockchain
+* First of first: **Never drink driving**.
+* Second: **Don't be drunk at the Release Day!**
+* **D-day**: **Aug-7-2021**(the next day of the first thursday of Augest)
 
 **Beer** is a modern community-centric green cryptocurrency based on a proof-of-space-and-time consensus algorithm. It is a community-supported fork of the [Chia Network](https://github.com/Chia-Network/chia-blockchain) codebase.
 
@@ -20,9 +15,24 @@ If you are behind a NAT, it can be difficult for peers outside your subnet to re
 Most users should only install harvesters, farmers, plotter, full nodes, and wallets. Building Timelords and VDFs is for sophisticated users, in most environments. Beer Network and additional volunteers(if you wanna be one of us, contact us!) are running sufficient Timelords for consensus.
 
 
-
 # Installing & Running
-Download Wallet :[BEER GUI](https://github.com/Beer-Network/beer-blockchain/releases/)
+If you are running an old version, please delete the old data under ```~/.beer``` 
+
+on Windows Powershell:
+```bash
+rm ~/.beer
+```
+on OSX Terminal:
+```bash
+rm -r ~/.beer
+```
+on Linux:
+```bash
+rm -r ~/.beer
+```
+
+
+### Download Wallet :[Beer Blockchain](https://github.com/Beer-Network/beer-blockchain/releases/)
 
 As reference: a Quick Start Guide is available from the repository [CHIA WIKI](https://github.com/Chia-Network/chia-blockchain/wiki).
 
