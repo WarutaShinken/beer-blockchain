@@ -9,7 +9,7 @@ from beer.server.server import BeerServer, ssl_context_for_client
 from beer.server.ws_connection import WSBeerConnection
 from beer.ssl.create_ssl import generate_ca_signed_cert
 from beer.types.peer_info import PeerInfo
-from beer.util.block_tools import test_constants
+from tests.block_tools import test_constants
 from beer.util.ints import uint16
 from tests.setup_nodes import (
     bt,

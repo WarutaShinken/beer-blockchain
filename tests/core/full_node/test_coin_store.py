@@ -18,7 +18,7 @@ from beer.types.full_block import FullBlock
 from beer.types.generator_types import BlockGenerator
 from beer.util.generator_tools import tx_removals_and_additions
 from beer.util.ints import uint64, uint32
-from beer.util.wallet_tools import WalletTool
+from tests.wallet_tools import WalletTool
 from beer.util.db_wrapper import DBWrapper
 from tests.setup_nodes import bt, test_constants
 
@@ -103,7 +103,12 @@ class TestCoinStore:
                 if block.is_transaction_block():
                     if block.transactions_generator is not None:
                         block_gen: BlockGenerator = BlockGenerator(block.transactions_generator, [])
-                        npc_result = get_name_puzzle_conditions(block_gen, bt.constants.MAX_BLOCK_COST_CLVM, False)
+                        npc_result = get_name_puzzle_conditions(
+                            block_gen,
+                            bt.constants.MAX_BLOCK_COST_CLVM,
+                            cost_per_byte=bt.constants.COST_PER_BYTE,
+                            safe_mode=False,
+                        )
                         tx_removals, tx_additions = tx_removals_and_additions(npc_result.npc_list)
                     else:
                         tx_removals, tx_additions = [], []
