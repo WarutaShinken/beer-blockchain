@@ -84,7 +84,7 @@ find_python() {
 	unset BEST_VERSION
 	for V in 37 3.7 38 3.8 39 3.9 3; do
 		if which python$V >/dev/null; then
-			if [ x"$BEST_VERSION" = x ]; then
+			if [ "$BEST_VERSION" = "" ]; then
 				BEST_VERSION=$V
 			fi
 		fi
@@ -93,7 +93,7 @@ find_python() {
 	set -e
 }
 
-if [ x"$INSTALL_PYTHON_VERSION" = x ]; then
+if [ "$INSTALL_PYTHON_VERSION" = "" ]; then
 	INSTALL_PYTHON_VERSION=$(find_python)
 fi
 
@@ -120,8 +120,8 @@ python -m pip install --extra-index-url https://pypi.chia.net/simple/ miniupnpc=
 python -m pip install -e . --extra-index-url https://pypi.chia.net/simple/
 
 echo ""
-echo "Beer blockchain install.sh complete. "
-echo "For assistance join us on Discord in the #testnet chat channel:"
+echo "Beer blockchain install.sh complete."
+echo "For assistance join us on Discord in the #support chat channel:"
 echo "https://discord.gg/XxzEn9Ccdn"
 echo ""
 echo "Try the Quick Start Guide to running beer-blockchain:"

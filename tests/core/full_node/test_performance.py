@@ -17,7 +17,7 @@ from beer.types.condition_with_args import ConditionWithArgs
 from beer.types.unfinished_block import UnfinishedBlock
 from beer.util.clvm import int_to_bytes
 from beer.util.ints import uint64
-from beer.util.wallet_tools import WalletTool
+from tests.wallet_tools import WalletTool
 from tests.core.fixtures import empty_blockchain  # noqa: F401
 
 from tests.connection_utils import add_dummy_connection, connect_and_get_peer

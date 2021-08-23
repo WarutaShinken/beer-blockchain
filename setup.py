@@ -1,12 +1,12 @@
 from setuptools import setup
 
 dependencies = [
-    "blspy==1.0.2",  # Signature library
-    "chiavdf==1.0.1",  # timelord and vdf verification
+    "blspy==1.0.5",  # Signature library
+    "chiavdf==1.0.2",  # timelord and vdf verification
     "chiabip158==1.0",  # bip158-style wallet filters
-    "chiapos==1.0.2",  # proof of space
-    "clvm==0.9.6",
-    "clvm_rs==0.1.7",
+    "chiapos==1.0.4",  # proof of space
+    "clvm==0.9.7",
+    "clvm_rs==0.1.8",
     "clvm_tools==0.4.3",
     "aiohttp==3.7.4",  # HTTP server for full node rpc
     "aiosqlite==0.17.0",  # asyncio wrapper for sqlite, to store blocks
@@ -42,8 +42,6 @@ dev_dependencies = [
 
 kwargs = dict(
     name="beer-blockchain",
-    author="Mariano Sorgente",
-    author_email="mariano@beernetwork.org",
     description="Beer blockchain full node, farmer, timelord, and wallet.",
     url="https://beernetwork.org/",
     license="Apache License",
@@ -60,6 +58,7 @@ kwargs = dict(
         "build_scripts",
         "beer",
         "beer.cmds",
+        "beer.clvm",
         "beer.consensus",
         "beer.daemon",
         "beer.full_node",
@@ -68,6 +67,7 @@ kwargs = dict(
         "beer.harvester",
         "beer.introducer",
         "beer.plotting",
+        "beer.pools",
         "beer.protocols",
         "beer.rpc",
         "beer.server",
@@ -101,7 +101,7 @@ kwargs = dict(
     },
     package_data={
         "beer": ["pyinstaller.spec"],
-        "beer.wallet.puzzles": ["*.clvm", "*.clvm.hex"],
+        "": ["*.clvm", "*.clvm.hex", "*.clib", "*.clinc", "*.clsp"],
         "beer.util": ["initial-*.yaml", "english.txt"],
         "beer.ssl": ["beer_ca.crt", "beer_ca.key", "dst_root_ca.pem"],
         "mozilla-ca": ["cacert.pem"],

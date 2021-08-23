@@ -8,7 +8,7 @@ import yaml
 from beer import __version__
 from beer.consensus.coinbase import create_puzzlehash_for_pk
 from beer.ssl.create_ssl import generate_ca_signed_cert, get_beer_ca_crt_key, make_ca_cert
-from beer.util.bech32m import encode_puzzle_hash, decode_puzzle_hash
+from beer.util.bech32m import encode_puzzle_hash
 from beer.util.config import (
     create_default_beer_config,
     initial_config_file,
@@ -243,8 +243,13 @@ def init(create_certs: Optional[Path], root_path: Path):
             else:
                 print(f"** Directory {create_certs} does not exist **")
         else:
-            print(f"** {root_path} does not exist **")
-            print("** Please run `beer init` to migrate or create new config files **")
+            print(f"** {root_path} does not exist. Executing core init **")
+            # sanity check here to prevent infinite recursion
+            if beer_init(root_path) == 0 and root_path.exists():
+                return init(create_certs, root_path)
+
+            print(f"** {root_path} was not created. Exiting **")
+            return -1
     else:
         return beer_init(root_path)
 

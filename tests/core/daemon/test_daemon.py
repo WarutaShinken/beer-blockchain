@@ -6,7 +6,7 @@ import pytest
 from beer.server.outbound_message import NodeType
 from beer.server.server import ssl_context_for_server
 from beer.types.peer_info import PeerInfo
-from beer.util.block_tools import BlockTools
+from tests.block_tools import BlockTools
 from beer.util.ints import uint16
 from beer.util.ws_message import create_payload
 from tests.core.node_height import node_height_at_least
